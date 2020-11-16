@@ -44,10 +44,12 @@ else:
         print("Nezadali jste poměr jako číslo. Program skončí chybou.")
         exit()
 
+#Vytvoření listů, do kterých se budou ukládat vstupní body a také proměnné podmínky zadávání bodů.
 X_body = []
 Y_body = []
 souhlas = 1
 
+#Zadávání bodů. Realizuje se, dokud se do proměnné souhlas nepřiřadí 0. 
 print("Zadejte zeměpisnou šířku a zeměpisnou délko délku bodu/ů.")
 while souhlas != '0':
     print("Zadejte zeměpisnou šířku. Zapište jako celé či desetinné číslo.")
@@ -69,6 +71,7 @@ while souhlas != '0':
     print("Přejete si zadat další bod? Pokud ne, napiště 0.")
     souhlas = input()
 
+#Přepočet jednotek, výpočet poloměru a nastavení rychlosti želvičky. 
 radius = radius * 100000
 speed(0)
 R = radius/scale/0.03
@@ -232,6 +235,7 @@ def sanson_body (R):
         print(f"Bod č. {i}: Přepočtená souřadnice zeměpisné šířky je {b} a souřadnice zeměpisné délky {a}.")
     exitonclick()
 
+#Volání funkcí, realizovaná na základě vstupní informace o kódu zvoleného zobrazení. 
 if value == "Lv":
     lambert_valcove(R)
     lambert_valcove_body(R)
